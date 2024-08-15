@@ -3,6 +3,8 @@ package app
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/austinwilson1224/go-rest-api-basic-structure/controller"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,6 +18,8 @@ func StartApp() {
 
 
 	router.GET("/test", testFunc)
+	router.GET("/test2", controller.TestController)
+	MapUrls()
 	router.Run()
 }
 
